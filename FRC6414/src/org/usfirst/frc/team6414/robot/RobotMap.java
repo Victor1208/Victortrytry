@@ -14,15 +14,15 @@ package org.usfirst.frc.team6414.robot;
  * floating around.
  */
 public class RobotMap {
+	public static int CESHI = 1;
+	
     public static int JOYSTICK_PORT = 0;
     
-    public static int DRIVE_FRONT_RIGHT = 1;
-    public static int DRIVE_FRONT_LEFT = 2;
+    public static int DRIVE_FRONT_RIGHT = 8;
+    public static int DRIVE_FRONT_LEFT = 7;
     public static int DRIVE_BACK_RIGHT = 3;
     public static int DRIVE_BACK_LEFT = 4;
     
-    public static int SOLENOID_FWD_CHANNEL = 0;
-    public static int SOLENOID_BWD_CHANNEL = 1;
 
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.

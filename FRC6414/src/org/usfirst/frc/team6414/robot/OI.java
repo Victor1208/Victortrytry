@@ -7,6 +7,8 @@
 
 package org.usfirst.frc.team6414.robot;
 
+import org.usfirst.frc.team6414.robot.commands.CECE;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -21,14 +23,16 @@ public class OI {
 	    public Joystick joystick;
 	    public Button button1;
 	    public Button button2;
+	    public Button button4;
 	   
 
 	    public OI(){
 	    	joystick = new Joystick(RobotMap.JOYSTICK_PORT);
-	    	button1 = new JoystickButton(this.joystick, 1);
+	    
 	    	button2 = new JoystickButton(this.joystick, 2);
-	    	
+	    	button4 = new JoystickButton(this.joystick, 4);
 
+	    	this.button4.whenPressed(new CECE());
 	    }
         
 	    public double getDrivingJoyStickY() {

@@ -15,10 +15,9 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-import org.usfirst.frc.team6414.robot.subsystems.PIDprocessor;
-import org.usfirst.frc.team6414.robot.subsystems.Solenoid;
+
 import org.usfirst.frc.team6414.robot.subsystems.Chassis;
-import org.usfirst.frc.team6414.robot.subsystems.EncoderChassis;
+
 
 /**
  * The VM is configured to automatically run this class, and to call the

@@ -5,6 +5,7 @@ import org.usfirst.frc.team6414.robot.RobotMap;
 
 import com.ctre.CANTalon;
 
+import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -12,19 +13,23 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  *
  */
 public class Chassis extends Subsystem {
-	private CANTalon frontLeft;
-	private CANTalon backLeft;
+	private Jaguar frontLeft;
+	private Jaguar backLeft;
 	
 
-	private CANTalon frontRight;
-	private CANTalon backRight;
+	private Jaguar frontRight;
+	private Jaguar backRight;
+	
+	private Jaguar dong;
 	
 	
 	public Chassis(){
-		frontLeft = new CANTalon(RobotMap.DRIVE_FRONT_LEFT);
-		backLeft = new CANTalon(RobotMap.DRIVE_BACK_LEFT);
-		frontRight = new CANTalon(RobotMap.DRIVE_FRONT_RIGHT);
-		backRight = new CANTalon(RobotMap.DRIVE_BACK_RIGHT);
+		frontLeft = new Jaguar(RobotMap.DRIVE_FRONT_LEFT);
+		backLeft = new Jaguar(RobotMap.DRIVE_BACK_LEFT);
+		frontRight = new Jaguar(RobotMap.DRIVE_FRONT_RIGHT);
+		backRight = new Jaguar(RobotMap.DRIVE_BACK_RIGHT);
+		
+		dong = new Jaguar(RobotMap.CESHI);
 				
 	}
 	
@@ -67,6 +72,13 @@ public class Chassis extends Subsystem {
 	
 	}
 	
+	public void dongqilai(){
+		dong.set(0.9);
+	}
+	
+	public void buyaodong(){
+		dong.set(0.0);
+	}
 
 	public void stop() {
 	frontLeft.set(0.0);
