@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import org.usfirst.frc.team6414.robot.commands.OI;
+
 import org.usfirst.frc.team6414.robot.subsystems.PIDprocessor;
 import org.usfirst.frc.team6414.robot.subsystems.Solenoid;
 import org.usfirst.frc.team6414.robot.subsystems.Chassis;
@@ -28,11 +28,7 @@ import org.usfirst.frc.team6414.robot.subsystems.EncoderChassis;
  * project.
  */
 public class Robot extends IterativeRobot {
-	
-	
-    public static EncoderChassis encoderchassis;
-    public static PIDprocessor pidprocessor;
-    public static Solenoid solenoid;
+
     public static Chassis chassis;
     
 
@@ -44,12 +40,8 @@ public class Robot extends IterativeRobot {
     }
 
     public void robotInit() {
-        oi = new OI();
-        encoderchassis = new EncoderChassis();
-        pidprocessor = new PIDprocessor();
-        solenoid = new Solenoid();
         chassis = new Chassis();
-        
+        oi = new OI(); 
     }
 
     public void disabledInit() {

@@ -5,9 +5,7 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc.team6414.robot.commands;
-
-import org.usfirst.frc.team6414.robot.RobotMap;
+package org.usfirst.frc.team6414.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -30,8 +28,7 @@ public class OI {
 	    	button1 = new JoystickButton(this.joystick, 1);
 	    	button2 = new JoystickButton(this.joystick, 2);
 	    	
-	    	this.button1.whenPressed(new OpenSolenoid());
-	    	this.button1.whenReleased(new StopSolenoid());
+
 	    }
         
 	    public double getDrivingJoyStickY() {
